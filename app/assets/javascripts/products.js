@@ -46,7 +46,7 @@ $(document).ready( function() {
   
   
   
-  $(documents).on('click', "product-item", function() {
+  $(document).on('click', ".product-item", function() {
     currentProduct.id = this.dataset.id;
     currentProduct.name = this.dataset.name;
     $.ajax({
@@ -57,8 +57,8 @@ $(document).ready( function() {
       var list = $('#ingredients');
       $('#product').text('Ingredients in ' + currentProduct.name);
       list.empty();
-      ingredients.forEach( function(char) {
-        var li = '<li data-ingredient-id="' + ingredient.id + '">' + ingredient.name + '-' + '</li>'
+      ingredients.forEach( function(ingredient) {
+        var li = '<li data-ingredient-id="' + ingredient.id + '">' + ingredient.name + '</li>'
         list.append(li)
       });
     });
