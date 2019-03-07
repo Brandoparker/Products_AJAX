@@ -1,0 +1,23 @@
+<h2 class="center">Products</h2>
+<hr />
+<div class="row">
+  <div class="col s12 m6">
+    <button class="btn" id="toggle">Show Form</button>
+    <ul id="products-list">
+      <% @products.each do |product| %>
+        <li
+          class="product-item"
+          data-id=<%= product.id %>
+          data-name="<%= product.name %>""
+        >
+          <%= product.name %> - <%= product.description %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="row" id="product-list">
+    <h3 id="product">Ingredients in Product</h2>
+    <ul id="ingredients">
+    </ul>
+  </div>
+</div>
